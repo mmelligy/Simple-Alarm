@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		6820994D2396BC72005B358F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6820994C2396BC72005B358F /* AppDelegate.swift */; };
 		6820994F2396BC72005B358F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6820994E2396BC72005B358F /* SceneDelegate.swift */; };
-		682099512396BC72005B358F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682099502396BC72005B358F /* ViewController.swift */; };
-		682099542396BC72005B358F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682099522396BC72005B358F /* Main.storyboard */; };
+		682099512396BC72005B358F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682099502396BC72005B358F /* HomeViewController.swift */; };
 		682099562396BC72005B358F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 682099552396BC72005B358F /* Assets.xcassets */; };
 		682099592396BC72005B358F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682099572396BC72005B358F /* LaunchScreen.storyboard */; };
+		682099652396E07E005B358F /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682099632396E07E005B358F /* AlarmTableViewCell.swift */; };
+		682099662396E07E005B358F /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 682099642396E07E005B358F /* AlarmTableViewCell.xib */; };
+		6874FE522396E971006930AA /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6874FE512396E971006930AA /* HomeView.xib */; };
+		6874FE582396FBBC006930AA /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874FE572396FBBC006930AA /* AlarmModel.swift */; };
+		6874FE5A23970C24006930AA /* AddAlarm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6874FE5923970C24006930AA /* AddAlarm.xib */; };
+		6874FE5C23970C3E006930AA /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874FE5B23970C3E006930AA /* AddAlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		682099492396BC72005B358F /* Simple Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6820994C2396BC72005B358F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6820994E2396BC72005B358F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		682099502396BC72005B358F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		682099532396BC72005B358F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		682099502396BC72005B358F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		682099552396BC72005B358F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		682099582396BC72005B358F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6820995A2396BC72005B358F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		682099632396E07E005B358F /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
+		682099642396E07E005B358F /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
+		6874FE512396E971006930AA /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		6874FE572396FBBC006930AA /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		6874FE5923970C24006930AA /* AddAlarm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAlarm.xib; sourceTree = "<group>"; };
+		6874FE5B23970C3E006930AA /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,52 @@
 		6820994B2396BC72005B358F /* Simple Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				6820994C2396BC72005B358F /* AppDelegate.swift */,
-				6820994E2396BC72005B358F /* SceneDelegate.swift */,
-				682099502396BC72005B358F /* ViewController.swift */,
-				682099522396BC72005B358F /* Main.storyboard */,
+				6874FE552396FB50006930AA /* Application */,
+				682099622396C655005B358F /* Controller */,
+				6874FE562396FB64006930AA /* Model */,
+				6874FE5F23981372006930AA /* Utilities */,
 				682099552396BC72005B358F /* Assets.xcassets */,
 				682099572396BC72005B358F /* LaunchScreen.storyboard */,
 				6820995A2396BC72005B358F /* Info.plist */,
 			);
 			path = "Simple Alarm";
+			sourceTree = "<group>";
+		};
+		682099622396C655005B358F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				682099502396BC72005B358F /* HomeViewController.swift */,
+				6874FE512396E971006930AA /* HomeView.xib */,
+				682099632396E07E005B358F /* AlarmTableViewCell.swift */,
+				682099642396E07E005B358F /* AlarmTableViewCell.xib */,
+				6874FE5B23970C3E006930AA /* AddAlarmViewController.swift */,
+				6874FE5923970C24006930AA /* AddAlarm.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6874FE552396FB50006930AA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6820994C2396BC72005B358F /* AppDelegate.swift */,
+				6820994E2396BC72005B358F /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6874FE562396FB64006930AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6874FE572396FBBC006930AA /* AlarmModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6874FE5F23981372006930AA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +172,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6874FE5A23970C24006930AA /* AddAlarm.xib in Resources */,
 				682099592396BC72005B358F /* LaunchScreen.storyboard in Resources */,
 				682099562396BC72005B358F /* Assets.xcassets in Resources */,
-				682099542396BC72005B358F /* Main.storyboard in Resources */,
+				682099662396E07E005B358F /* AlarmTableViewCell.xib in Resources */,
+				6874FE522396E971006930AA /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +187,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682099512396BC72005B358F /* ViewController.swift in Sources */,
+				6874FE5C23970C3E006930AA /* AddAlarmViewController.swift in Sources */,
+				6874FE582396FBBC006930AA /* AlarmModel.swift in Sources */,
+				682099512396BC72005B358F /* HomeViewController.swift in Sources */,
 				6820994D2396BC72005B358F /* AppDelegate.swift in Sources */,
 				6820994F2396BC72005B358F /* SceneDelegate.swift in Sources */,
+				682099652396E07E005B358F /* AlarmTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		682099522396BC72005B358F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				682099532396BC72005B358F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		682099572396BC72005B358F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

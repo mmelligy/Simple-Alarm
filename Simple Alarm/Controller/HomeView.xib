@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Simple_Alarm" customModuleProvider="target">
+            <connections>
+                <outlet property="alarmTableView" destination="CtC-fM-6js" id="S4t-fp-jW4"/>
+                <outlet property="view" destination="iN0-l3-epB" id="5OD-Sm-uiY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="HomeView" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CtC-fM-6js">
+                    <rect key="frame" x="0.0" y="179" width="414" height="613"/>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="KEe-lH-Wxv"/>
+                        <outlet property="delegate" destination="-1" id="jpD-8p-qgn"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make me up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONV-vA-AMy">
+                    <rect key="frame" x="112" y="54" width="190" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="190" id="3CN-CN-0dc"/>
+                        <constraint firstAttribute="height" constant="45" id="64m-3G-vS3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-7Y-385">
+                    <rect key="frame" x="57" y="802" width="300" height="50"/>
+                    <color key="backgroundColor" red="0.69019607843137254" green="0.23137254901960785" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5tN-kE-Z5S"/>
+                        <constraint firstAttribute="width" constant="300" id="DhK-Ip-MOT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <state key="normal" title="Add New">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addNewAlarmPressed:" destination="-1" eventType="touchUpInside" id="SKZ-u3-P21"/>
+                    </connections>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WyV-hR-5dx">
+                    <rect key="frame" x="32" y="119" width="350" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="AsD-5n-fAD"/>
+                        <constraint firstAttribute="width" constant="350" id="RnX-QN-HHq"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Schedule"/>
+                        <segment title="Meetings"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentButtonPressed:" destination="-1" eventType="valueChanged" id="f9w-zj-8wo"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="WyV-hR-5dx" firstAttribute="top" secondItem="ONV-vA-AMy" secondAttribute="bottom" constant="20" id="6p5-Br-3AP"/>
+                <constraint firstItem="ONV-vA-AMy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FIH-Wb-PFX"/>
+                <constraint firstItem="WyV-hR-5dx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JWU-sx-Wzd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hKT-7Y-385" secondAttribute="bottom" constant="10" id="TsT-oH-vEl"/>
+                <constraint firstItem="CtC-fM-6js" firstAttribute="top" secondItem="WyV-hR-5dx" secondAttribute="bottom" constant="30" id="WZL-YY-dF8"/>
+                <constraint firstItem="hKT-7Y-385" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="afW-vu-RSv"/>
+                <constraint firstItem="ONV-vA-AMy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="fKL-Em-qFg"/>
+                <constraint firstItem="hKT-7Y-385" firstAttribute="top" secondItem="CtC-fM-6js" secondAttribute="bottom" constant="10" id="leL-Yn-UTw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CtC-fM-6js" secondAttribute="trailing" id="mkq-Fa-VlW"/>
+                <constraint firstItem="CtC-fM-6js" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tZC-RY-A7y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="118"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlarmTableViewCell" customModule="Simple_Alarm" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmTableViewCell" rowHeight="141" id="KGk-i7-Jjw" customClass="AlarmTableViewCell" customModule="Simple_Alarm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="141"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="141"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="zuj-bb-wcF">
+                        <rect key="frame" x="20.5" y="35.5" width="400" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz9-Dy-u5W">
+                                <rect key="frame" x="10" y="25" width="25.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GgI-FI-hw6">
+                                <rect key="frame" x="108.5" y="0.0" width="170" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-fZ-ryY">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="kBt-6G-Kli"/>
+                                            <constraint firstAttribute="width" constant="170" id="nWd-Ic-dqM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Start / Weekly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shN-7D-gdu">
+                                        <rect key="frame" x="0.0" y="60" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="PSD-6x-VIc"/>
+                                            <constraint firstAttribute="width" constant="150" id="evF-KW-T95"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nau-MP-oCK">
+                                <rect key="frame" x="351.5" y="19.5" width="40.5" height="31"/>
+                            </switch>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dz9-Dy-u5W" firstAttribute="leading" secondItem="zuj-bb-wcF" secondAttribute="leading" constant="10" id="OD2-Ir-hUY"/>
+                            <constraint firstAttribute="trailing" secondItem="nau-MP-oCK" secondAttribute="trailing" constant="10" id="f86-kb-1OE"/>
+                            <constraint firstAttribute="height" constant="70" id="fUm-yJ-8XX"/>
+                            <constraint firstAttribute="width" constant="400" id="l58-3w-odq"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zuj-bb-wcF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7nk-aB-L9g"/>
+                    <constraint firstItem="zuj-bb-wcF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9de-PR-z1y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dailyStartWeeklyLabel" destination="shN-7D-gdu" id="83m-oU-56G"/>
+                <outlet property="pmamLabel" destination="dz9-Dy-u5W" id="19q-AE-uEt"/>
+                <outlet property="switchButton" destination="nau-MP-oCK" id="PHH-dP-fPs"/>
+                <outlet property="timeAlarmLabel" destination="tVZ-fZ-ryY" id="mH3-kx-jy0"/>
+            </connections>
+            <point key="canvasLocation" x="225.36231884057972" y="-8.3705357142857135"/>
+        </tableViewCell>
+    </objects>
+</document>
