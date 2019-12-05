@@ -18,6 +18,8 @@
 		6874FE582396FBBC006930AA /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874FE572396FBBC006930AA /* AlarmModel.swift */; };
 		6874FE5A23970C24006930AA /* AddAlarm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6874FE5923970C24006930AA /* AddAlarm.xib */; };
 		6874FE5C23970C3E006930AA /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874FE5B23970C3E006930AA /* AddAlarmViewController.swift */; };
+		6874FE6223982DC9006930AA /* AlarmAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874FE6023982DC9006930AA /* AlarmAlertViewController.swift */; };
+		6874FE6323982DC9006930AA /* AlarmAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6874FE6123982DC9006930AA /* AlarmAlertViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		6874FE572396FBBC006930AA /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
 		6874FE5923970C24006930AA /* AddAlarm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAlarm.xib; sourceTree = "<group>"; };
 		6874FE5B23970C3E006930AA /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
+		6874FE6023982DC9006930AA /* AlarmAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAlertViewController.swift; sourceTree = "<group>"; };
+		6874FE6123982DC9006930AA /* AlarmAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmAlertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +84,9 @@
 		682099622396C655005B358F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				682099502396BC72005B358F /* HomeViewController.swift */,
-				6874FE512396E971006930AA /* HomeView.xib */,
-				682099632396E07E005B358F /* AlarmTableViewCell.swift */,
-				682099642396E07E005B358F /* AlarmTableViewCell.xib */,
-				6874FE5B23970C3E006930AA /* AddAlarmViewController.swift */,
-				6874FE5923970C24006930AA /* AddAlarm.xib */,
+				6874FE6423991C0E006930AA /* HomeViewcontroller */,
+				6874FE6623991C45006930AA /* Add AlarmViewController */,
+				6874FE6723991C5E006930AA /* AlarmAlertViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,6 +113,43 @@
 			children = (
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6874FE6423991C0E006930AA /* HomeViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				682099502396BC72005B358F /* HomeViewController.swift */,
+				6874FE512396E971006930AA /* HomeView.xib */,
+				6874FE6523991C2D006930AA /* HomeTableViewCell */,
+			);
+			path = HomeViewcontroller;
+			sourceTree = "<group>";
+		};
+		6874FE6523991C2D006930AA /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				682099632396E07E005B358F /* AlarmTableViewCell.swift */,
+				682099642396E07E005B358F /* AlarmTableViewCell.xib */,
+			);
+			path = HomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		6874FE6623991C45006930AA /* Add AlarmViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6874FE5B23970C3E006930AA /* AddAlarmViewController.swift */,
+				6874FE5923970C24006930AA /* AddAlarm.xib */,
+			);
+			path = "Add AlarmViewController";
+			sourceTree = "<group>";
+		};
+		6874FE6723991C5E006930AA /* AlarmAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6874FE6023982DC9006930AA /* AlarmAlertViewController.swift */,
+				6874FE6123982DC9006930AA /* AlarmAlertViewController.xib */,
+			);
+			path = AlarmAlertViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +213,7 @@
 				6874FE5A23970C24006930AA /* AddAlarm.xib in Resources */,
 				682099592396BC72005B358F /* LaunchScreen.storyboard in Resources */,
 				682099562396BC72005B358F /* Assets.xcassets in Resources */,
+				6874FE6323982DC9006930AA /* AlarmAlertViewController.xib in Resources */,
 				682099662396E07E005B358F /* AlarmTableViewCell.xib in Resources */,
 				6874FE522396E971006930AA /* HomeView.xib in Resources */,
 			);
@@ -193,6 +232,7 @@
 				6820994D2396BC72005B358F /* AppDelegate.swift in Sources */,
 				6820994F2396BC72005B358F /* SceneDelegate.swift in Sources */,
 				682099652396E07E005B358F /* AlarmTableViewCell.swift in Sources */,
+				6874FE6223982DC9006930AA /* AlarmAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

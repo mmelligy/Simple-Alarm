@@ -76,16 +76,15 @@ class AddAlarmViewController: UIViewController {
             
             guard let categoryselected: String = self.category else {return}
             guard let repeatAlarm: String = self.repeatButtonV else {return}
+            guard let massage = self.messageTextFiled.text else {return}
             
             
-            let alarm = Alarm(timeAlarm: self.time, dailyStartWeekly: repeatAlarm, category: categoryselected)
+            let alarm = Alarm(alarmTime: self.time, dailyStartWeekly: repeatAlarm, category: categoryselected, massage: massage)
             
             
             self.delegate?.addAlarm(alarm: alarm)
             
-//            let ViewController = HomeViewController(nibName: "HomeView", bundle: nil) as! HomeViewController
-//            ViewController.repeatButtonV = self.repeatButtonV
-//            ViewController.category = self.category
+
             
         }
         

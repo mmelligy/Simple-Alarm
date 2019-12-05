@@ -16,42 +16,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="441" height="141"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="zuj-bb-wcF">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zuj-bb-wcF">
                         <rect key="frame" x="20.5" y="35.5" width="400" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz9-Dy-u5W">
-                                <rect key="frame" x="10" y="25" width="25.5" height="20.5"/>
+                                <rect key="frame" x="10" y="25" width="26.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GgI-FI-hw6">
-                                <rect key="frame" x="108.5" y="0.0" width="170" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GgI-FI-hw6">
+                                <rect key="frame" x="86.5" y="0.0" width="214" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-fZ-ryY">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="60"/>
+                                        <rect key="frame" x="7" y="0.0" width="200" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="kBt-6G-Kli"/>
-                                            <constraint firstAttribute="width" constant="170" id="nWd-Ic-dqM"/>
+                                            <constraint firstAttribute="width" constant="200" id="nWd-Ic-dqM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Start / Weekly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shN-7D-gdu">
-                                        <rect key="frame" x="0.0" y="60" width="150" height="20"/>
+                                        <rect key="frame" x="7" y="60" width="200" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="PSD-6x-VIc"/>
-                                            <constraint firstAttribute="width" constant="150" id="evF-KW-T95"/>
+                                            <constraint firstAttribute="width" constant="200" id="evF-KW-T95"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nau-MP-oCK">
-                                <rect key="frame" x="351.5" y="19.5" width="40.5" height="31"/>
+                                <rect key="frame" x="350.5" y="19.5" width="41.5" height="31"/>
                             </switch>
                         </subviews>
                         <constraints>

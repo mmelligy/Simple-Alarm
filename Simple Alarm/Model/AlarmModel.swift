@@ -13,10 +13,12 @@ class Alarm {
     var alarmTime: Date!
     var dailyStartWeekly: String!
     var category: String!
+    var massage: String!
     
-    init(timeAlarm: Date, dailyStartWeekly: String, category: String!) {
-        self.alarmTime = timeAlarm
+    init(alarmTime: Date, dailyStartWeekly: String, category: String!, massage: String) {
+        self.alarmTime = alarmTime
         self.dailyStartWeekly = dailyStartWeekly
         self.category = category
+        self.massage = massage
     }
 }

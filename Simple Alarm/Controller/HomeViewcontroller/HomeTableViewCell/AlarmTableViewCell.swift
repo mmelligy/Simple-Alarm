@@ -26,11 +26,12 @@ class AlarmTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
     func sitUpAlarmTableViewCell(alarm:Alarm){
-        dailyStartWeeklyLabel.text = alarm.dailyStartWeekly
+        let countDown = printTime(timeEnd: alarm)
+        dailyStartWeeklyLabel.text = alarm.dailyStartWeekly + "/" + countDown
         let formatterforAmorPm = DateFormatter()
         formatterforAmorPm.dateFormat = "a"
         pmamLabel.text = formatterforAmorPm.string(for: alarm.alarmTime)
@@ -39,6 +40,17 @@ class AlarmTableViewCell: UITableViewCell {
         timeAlarmLabel.text = formatter.string(for: alarm.alarmTime)
         
         
+    }
+    
+    // MARK:- countDown Function
+    func printTime(timeEnd : Alarm) -> String{
+        let startTime = Date()
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour,.minute,.second]
+        formatter.unitsStyle = .short
+        let difference = formatter.string(from: startTime, to: timeEnd.alarmTime)!
+    
+        return difference
     }
     
 }

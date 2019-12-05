@@ -25,41 +25,21 @@ class HomeViewController: UIViewController {
     let date = Date()
     let formatter = DateFormatter()
     
+    var refresher: UIRefreshControl = {
+          let refresher = UIRefreshControl()
+          refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+          
+          return refresher
+      }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: cellIdentifier , bundle: nil)
         alarmTableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         
-//        let center = UNUserNotificationCenter.current()
-//
-//        center.requestAuthorization(options: [.alert, .badge ,.sound]) { (success, error) in
-//        }
-//
-//        let content = UNMutableNotificationContent()
-//        content.title = "hey I'm a notification"
-//        content.body = "look at me"
-//        content.sound = UNNotificationSound.default
-//
-//        let date = Date().addingTimeInterval(10)
-//
-//        let dateComponents = Calendar.current.dateComponents([.year, .month, .day , .hour , .minute, .second], from: date)
-//
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-//
-//        let uuidString = UUID().uuidString
-//
-//        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
-//        center.add(request) { (error) in
-//            print(error)
-//        }
-        var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 30
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        
-        scheduleNotification()
-        
-        
+    
+        alarmTableView.addSubview(refresher)
+        handleRefresh()
     }
     
     @IBAction func segmentButtonPressed(_ sender: UISegmentedControl) {
@@ -72,20 +52,17 @@ class HomeViewController: UIViewController {
             break
         }
     }
-    func scheduleNotification() {
+    func scheduleNotification(AlarmMessage : Alarm, timeInterval : Int) {
         let center = UNUserNotificationCenter.current()
 
         let content = UNMutableNotificationContent()
-        content.title = "Late wake up call"
-        content.body = "The early bird catches the worm, but the second mouse gets the cheese."
+        content.title = AlarmMessage.category
+        content.body = AlarmMessage.massage
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default
 
-        var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 30
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(timeInterval), repeats: false)
 
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         center.add(request)
@@ -141,6 +118,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! AlarmTableViewCell
         cell.sitUpAlarmTableViewCell(alarm: alarmsArray[indexPath.row])
+        self.refresher.endRefreshing()
         return cell
     }
     
@@ -148,7 +126,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return cellHeight
     }
     
-    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (action: UITableViewRowAction, indexPath: IndexPath) in
+            self.alarmsArray.remove(at: indexPath.row)
+            self.alarmTableView.reloadData()
+        }
+        deleteAction.backgroundColor = .red
+        
+        return [deleteAction]
+    }
     
 }
 
@@ -156,7 +143,16 @@ extension HomeViewController: AddAlarmDelegate {
     func addAlarm(alarm: Alarm) {
         self.dismiss(animated: true) {
             self.alarmsArray.append(alarm)
+            self.alarmsArray = self.alarmsArray.sorted(by: { $0.alarmTime < $1.alarmTime })
+            let elapsed = Date().timeIntervalSince(alarm.alarmTime)
+            print(elapsed)
+            let duration = abs(Int(elapsed))
+            self.scheduleNotification(AlarmMessage: alarm, timeInterval : duration)
             self.alarmTableView.reloadData()
         }
+    }
+    
+    @objc private func handleRefresh(){
+        self.alarmTableView.reloadData()
     }
 }
