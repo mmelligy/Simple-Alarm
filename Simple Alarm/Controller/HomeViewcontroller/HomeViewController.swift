@@ -37,6 +37,8 @@ class HomeViewController: UIViewController {
         let nib = UINib(nibName: cellIdentifier , bundle: nil)
         alarmTableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         
+        Timer(timeInterval: 30.0, target: self, selector: "handleRefresh", userInfo: nil, repeats: true)
+        
     
         alarmTableView.addSubview(refresher)
         handleRefresh()

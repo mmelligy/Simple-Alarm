@@ -44,6 +44,7 @@ class AddAlarmViewController: UIViewController {
     
     
     @IBAction func didchangeDatePicker(_ sender: UIDatePicker) {
+        print(sender.date)
         self.time = sender.date
     }
     
